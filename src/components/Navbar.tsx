@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import { useShopContext } from "../context/ShopContext";
+import ShoppingCart from "./ShoppingCart";
+
 
 export default function Navbar() {
   const { cartQuantity, openCart } = useShopContext();

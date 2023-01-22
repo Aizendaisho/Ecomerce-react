@@ -92,7 +92,7 @@ export default function ShopContextProvider({
       }}
     >
       {children}
-      <ShoppingCart />
+      <ShoppingCart isOpen={isOpen} />
     </ShopContext.Provider>
   );
 }
