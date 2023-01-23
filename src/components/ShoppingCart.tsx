@@ -39,7 +39,7 @@ export default function ShoppingCart({ isOpen }: { isOpen: boolean }) {
           total:{" "}
           {formato(
             cartItems.reduce((total, cartItem) => {
-              const item = products.find((i) => i.id === cartItem.id);
+              const item = products?.find((i) => i.id === cartItem.id);
               return total + (item?.price || 0) * cartItem.quantity;
             }, 0)
           )}

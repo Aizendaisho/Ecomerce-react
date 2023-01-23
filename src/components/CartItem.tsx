@@ -11,7 +11,7 @@ type CartItemProps = {
 export default function CartItem({ id, quantity }: CartItemProps) {
   const { removeFromCart } = useShopContext();
   const { products } = useProducts();
-  const item = products.find((i) => i.id === id);
+  const item = products?.find((i) => i.id === id);
   if (item == null) return null;
   let dollarFormat = new Intl.NumberFormat("en-US", {
     style: "currency",
