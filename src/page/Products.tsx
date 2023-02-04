@@ -26,9 +26,9 @@ export default function Products() {
     }
 
   return (
-    <div className=" h-scree">
+    <div className=" h-scree mx-auto container grid place-content-center content-center ">
       <h1 className=" text-5xl text-center m-5 font-bold">Productos</h1>
-      <div className=" grid grid-cols-5 m-5 min-h-screen">{displayProduct}</div>
+      <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 m-5 min-h-screen place-content-center content-center mx-auto container gap-6	" >{displayProduct}</div>
       <ReactPaginate 
       previousLabel={"Prev"}
       nextLabel={"Next"} 

@@ -8,7 +8,7 @@ import ShoppingCart from "./ShoppingCart";
 export default function Navbar() {
   const { cartQuantity, openCart } = useShopContext();
   return (
-    <nav className=" h-18 bg-gray-900 text-white flex items-center justify-between sticky top-0">
+    <nav className=" h-18 bg-gray-900 text-white flex items-center justify-between sticky top-0 z-10">
       <ul className="  flex items-center justify-start gap-3 p-4 text-lg">
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
