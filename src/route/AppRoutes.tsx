@@ -6,7 +6,7 @@ import Products from '../page/Products'
 import Cart from '../page/Cart'
 import Contact from '../page/Contact'
 import Navbar from '../components/Navbar'
-import ShopContextProvider, { ShopContext } from "../context/ShopContext";
+import ShopContextProvider from "../context/ShopContext";
 
 export default function AppRoutes() {
   return (
