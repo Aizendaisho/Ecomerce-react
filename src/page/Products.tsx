@@ -19,23 +19,25 @@ export default function Products() {
     .map((product) => (
       <ProductsComponent key={product.id} products={product} />
     ));
-    const pageCount = Math.ceil(products?.length / productPerPage);
-    const changePage = (data: any) => {
-      let selected = data.selected;
-      setPageNumber(selected);
-    }
+  const pageCount = Math.ceil(products?.length / productPerPage);
+  const changePage = (data: any) => {
+    let selected = data.selected;
+    setPageNumber(selected);
+  };
 
   return (
     <div className=" h-scree mx-auto container grid place-content-center content-center ">
       <h1 className=" text-5xl text-center m-5 font-bold">Productos</h1>
-      <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 m-5 min-h-screen place-content-center content-center mx-auto container gap-6	" >{displayProduct}</div>
-      <ReactPaginate 
-      previousLabel={"Prev"}
-      nextLabel={"Next"} 
-      pageCount={pageCount}
-      onPageChange={changePage}
-      containerClassName=" flex gap-2 align-items-center justify-center m-5"
-      activeClassName={" bg-blue-400 text-white px-1 active"}
+      <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 m-5 min-h-screen place-content-center content-center mx-auto container gap-6	">
+        {displayProduct}
+      </div>
+      <ReactPaginate
+        previousLabel={"Prev"}
+        nextLabel={"Next"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName=" flex gap-2 align-items-center justify-center m-5"
+        activeClassName={" bg-blue-400 text-white px-1 active"}
       />
     </div>
   );

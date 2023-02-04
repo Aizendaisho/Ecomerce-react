@@ -1,11 +1,9 @@
 import React from "react";
-import fondo from "../assets/img/fondo.jpeg"
+import fondo from "../assets/img/fondo.jpeg";
 
 export default function Home() {
   return (
     <div className=" container mx-auto mb-5">
-
-     
       <div
         className="hero min-h-screen"
         style={{
@@ -25,8 +23,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 }
