@@ -35,7 +35,7 @@ export default function Products() {
       pageCount={pageCount}
       onPageChange={changePage}
       containerClassName=" flex gap-2 align-items-center justify-center m-5"
-      activeClassName={" bg-blue-400 text-white px-1"}
+      activeClassName={" bg-blue-400 text-white px-1 active"}
       />
     </div>
   );

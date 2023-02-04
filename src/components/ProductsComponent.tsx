@@ -36,8 +36,8 @@ export default function ProductsComponent({
 
 
 
-    <div className=" card m-2 flex flex-col gap-3 items-stretch justify-center shadow-xl">
-      <div className="titulo h-10">
+    <div className="bg-gray-100 card m-2 flex flex-col gap-3 items-stretch justify-center shadow-xl">
+      <div className="titulo h-10 m-2">
 
       <h1 className=" text-xl font-mono font-bold">{titleFormat}</h1>
       </div>
@@ -84,7 +84,7 @@ export default function ProductsComponent({
       )}
       </div>
 
-      <Link to={`/product/${products.id}`} className=" m-2">Detalles</Link>
+      <Link to={`/product/${products.id}`} className=" m-2 link-accent">Detalles</Link>
     </div>
   );
 }

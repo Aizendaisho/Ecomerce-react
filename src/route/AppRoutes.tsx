@@ -7,6 +7,7 @@ import Cart from '../page/Cart'
 import Contact from '../page/Contact'
 import Navbar from '../components/Navbar'
 import ShopContextProvider from "../context/ShopContext";
+import Footer from '../components/Footer'
 
 export default function AppRoutes() {
   return (
@@ -24,6 +25,7 @@ export default function AppRoutes() {
             element={<h1 className=" text-5xl">No se encontro la pagina</h1>}
           />
         </Routes>
+        <Footer />
       </Router>
     </ShopContextProvider>
   );

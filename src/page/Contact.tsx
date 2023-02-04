@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div>Contact</div>
+    <div className=' container mx-auto h-screen'>Contact</div>
   )
 }
