@@ -8,12 +8,14 @@ import Contact from '../page/Contact'
 import Navbar from '../components/Navbar'
 import ShopContextProvider from "../context/ShopContext";
 import Footer from '../components/Footer'
+import NavDaisy from "../components/NavDaisy";
 
 export default function AppRoutes() {
   return (
     <ShopContextProvider>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
+        <NavDaisy />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

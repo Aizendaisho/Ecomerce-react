@@ -3,6 +3,7 @@ import { ProductsEntity } from "../types";
 import { useShopContext } from "../context/ShopContext";
 import useProducts from "../Request";
 import { formato } from "../format";
+import { Link } from "react-router-dom";
 
 type CartItemProps = {
   id: number;
@@ -10,34 +11,43 @@ type CartItemProps = {
 };
 
 export default function CartItem({ id, quantity }: CartItemProps) {
-  const { removeFromCart } = useShopContext();
+  const { removeFromCart, increaseCartQuantity, decreaseCartQuantity } =
+    useShopContext();
   const { products } = useProducts();
   const item = products?.find((i) => i.id === id);
   if (item == null) return null;
 
   return (
-    <div className="flex items-center justify-between">
-      <div className=" flex gap-4 justify-start items-center">
-        <img className=" h-32 w-32 " src={item.thumbnail} alt={item.title} />
+    <div className="flex items-center justify-between max-w-md shadow-lg">
+      <div className=" flex gap-4 justify-start items-center ">
+        <img
+          className=" h-32 w-32 rounded-md shadow-xl"
+          src={item.thumbnail}
+          alt={item.title}
+        />
         <div>
-          <p className=" text-xl">
-            {item.title}{" "}
+          <p className=" text-2xl">
+            {item.title.split(" ").slice(0, 2).join(" ")}{" "}
+          </p>
+          <p>
+            {formato(item.price)}{" "}
             {quantity > 1 && (
-              <span className=" text-base text-gray-800">{quantity}x</span>
+              <span className=" text-xl text-gray-800">x{quantity}</span>
             )}
           </p>
-          <p>{formato(item.price)}</p>
         </div>
       </div>
       <div className=" flex gap-2 items-center justify-center ">
         <p className="text-xl">{formato(item.price * quantity)}</p>
         <button
           onClick={() => removeFromCart(item.id)}
-          className=" border-2 border-red-500 text-red-500 px-5 py-2 rounded"
+          className=" btn btn-outline btn-secondary m-2"
         >
-          x
+          X
         </button>
       </div>
     </div>
   );
 }
+
+
